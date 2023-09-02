@@ -18,7 +18,7 @@ const router = createRouter({
             component: PedidoView,
         },
         {
-            path: "/:catchAll(.*",
+            path: "/:catchAll(.*)",
             name: "not-found",
             component: NotFoundView,
         },

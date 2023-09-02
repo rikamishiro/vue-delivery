@@ -1,20 +1,18 @@
 <template>
-
     <nav class="flex items-center h-16 w-full bg-blue-400">
         <div class="pt-2 pb-2 ml-6">
-            <a routerLink="/" class="text-xl font-bold no-underline whitespace-nowrap">Delivery</a>
+            <RouterLink to="/" class="text-xl font-bold no-underline whitespace-nowrap">Delivery</RouterLink>
         </div>
         <div class="flex flex-grow pl-4 justify-between">
             <div class="space-x-4">
-                <a routerLink="/restaurantes">Restaurantes</a>
-                <a routerLink="/produtos">Produtos</a>
-                <a routerLink="/pedido">Pedido</a>
+                <RouterLink to="/restaurantes">Restaurantes</RouterLink>
+                <RouterLink to="/produtos">Produtos</RouterLink>
+                <RouterLink to="/pedido">Pedido</RouterLink>
             </div>
             <div class="pr-4">
-                <a routerLink="/">Sair</a>
+                <RouterLink to="/">Sair</RouterLink>
             </div>
         </div>
-  </nav>
-  
+        
+    </nav>
 </template>
-  

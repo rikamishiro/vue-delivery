@@ -20,19 +20,22 @@
     import { ref } from 'vue';
     import { Produto } from '../../../models/Produto';
     import { ProdutoService } from '../../../services/ProdutoService';
+    import { usePedidoStore } from '../../../stores/PedidoStore';
+    import { MoneyFormat } from '../../../utils/MoneyFormat';
 
     let produtos = ref<Produto[]>([
-        new Produto(1, 'Coca Cola', 10.0)
     ]);
 
     produtos.value = await ProdutoService.getProdutos();
 
+    const store = usePedidoStore();
+
     const adicionarItem = (produto: Produto) => {
-        console.log("adicionando item: " + produto.id);
+        store.adicionarItem(produto);
     }
 
     const removerItem = (produto: Produto) => {
-        console.log("remover item: " + produto.id);
+        store.removeListenerItem(produto);
     }
 
 </script>
